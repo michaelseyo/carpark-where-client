@@ -15,13 +15,12 @@ export const AuthProvider = ({ children }) => {
 
   const checkToken = async () => {
     try {
-      const res = await fetch("/api/auth", {
+      const res = await fetch("https://my-carpark-api.herokuapp.com/api/auth", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "application/json",
         },
       });
-      console.log(res);
       if (res.statusText === "Unauthorized") {
         setMember(unknownMember);
       }

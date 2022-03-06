@@ -12,25 +12,35 @@ export default function CarparkItem({ carparkNumber, carparkInfo, time }) {
     <React.Fragment>
       <ListItem>
         <ListItemText
-          primary={<Typography variant="h6">{carparkNumber}</Typography>}
+          primary={
+            <Typography component="span" variant="h6">
+              {carparkNumber}
+            </Typography>
+          }
           secondary={
             <React.Fragment>
-              <Typography>
+              <Typography component="span">
                 <Moment>{time}</Moment>
               </Typography>
-              {carparkInfo.map((cp, index) => {
-                return (
-                  <Container key={index} sx={{ margin: "10px 0" }}>
-                    <Typography>Lot type: {cp.lot_type}</Typography>
-                    <Typography>Total lots: {cp.total_lots}</Typography>
-                    <Typography>Available: {cp.lots_available}</Typography>
-                  </Container>
-                );
-              })}
             </React.Fragment>
           }
         />
       </ListItem>
+      {carparkInfo.map((cp, index) => {
+        return (
+          <Container key={index} sx={{ margin: "10px 0" }}>
+            <Typography color="#6C6E70" align="left">
+              Lot type: {cp.lot_type}
+            </Typography>
+            <Typography color="#6C6E70" align="left">
+              Total lots: {cp.total_lots}
+            </Typography>
+            <Typography color="#6C6E70" align="left">
+              Available: {cp.lots_available}
+            </Typography>
+          </Container>
+        );
+      })}
       <Divider />
     </React.Fragment>
   );

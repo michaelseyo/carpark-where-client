@@ -51,16 +51,19 @@ export default function Login() {
 
   const handleLogin = async () => {
     try {
-      const res = await fetch("/api/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-        }),
-      });
+      const res = await fetch(
+        "https://my-carpark-api.herokuapp.com/api/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email,
+            password: password,
+          }),
+        }
+      );
 
       if (res.status === 200) {
         const resJson = await res.json();

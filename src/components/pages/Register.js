@@ -69,13 +69,16 @@ export default function Register() {
   // makes a POST request of the created member to server
   const postMember = async (member) => {
     try {
-      const res = await fetch("/api/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(member),
-      });
+      const res = await fetch(
+        "https://my-carpark-api.herokuapp.com/api/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(member),
+        }
+      );
       const resJson = await res.json();
       setResponse(resJson.message);
     } catch (err) {

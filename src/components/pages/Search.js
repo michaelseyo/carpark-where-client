@@ -45,12 +45,15 @@ export default function Search() {
   useEffect(() => {
     const getAvailabilityData = async () => {
       try {
-        const res = await fetch("/api/availability", {
-          headers: {
-            Authorization: `Bearer ${member.token}`,
-            "Content-Type": "application/json",
-          },
-        });
+        const res = await fetch(
+          "https://my-carpark-api.herokuapp.com/api/availability",
+          {
+            headers: {
+              Authorization: `Bearer ${member.token}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
 
         if (res.statusText === "Unauthorized") {
           setTimeout(() => {
@@ -89,7 +92,7 @@ export default function Search() {
       <Collapse
         in={checked}
         {...(checked ? { timeout: 1000 } : {})}
-        collapsedHeight={50}
+        collapsedheight={50}
       >
         <Typography variant="h3" color="primary" sx={{ fontWeight: "bolder" }}>
           Retrieve information
