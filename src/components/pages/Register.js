@@ -81,6 +81,11 @@ export default function Register() {
       );
       const resJson = await res.json();
       setResponse(resJson.message);
+      if (resJson.message === "Account created") {
+        setTimeout(() => {
+          navigate("/login");
+        }, 2000);
+      }
     } catch (err) {
       console.log(err);
     }
@@ -99,9 +104,6 @@ export default function Register() {
         member["contactNumber"] = contactNumber;
       }
       postMember(member);
-      setTimeout(() => {
-        navigate("/login");
-      }, 2000);
     } else {
       setErrors();
     }
