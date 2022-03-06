@@ -1,12 +1,16 @@
 import React from "react";
 import Moment from "react-moment";
 
-import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 
+const detailsGridStyle = {
+  margin: "0 10px 10px 10px",
+  padding: "5px 20px",
+};
 export default function CarparkItem({ carparkNumber, carparkInfo, time }) {
   return (
     <React.Fragment>
@@ -28,7 +32,7 @@ export default function CarparkItem({ carparkNumber, carparkInfo, time }) {
       </ListItem>
       {carparkInfo.map((cp, index) => {
         return (
-          <Container key={index} sx={{ margin: "10px 0" }}>
+          <Grid key={index} sx={detailsGridStyle}>
             <Typography color="#6C6E70" align="left">
               Lot type: {cp.lot_type}
             </Typography>
@@ -38,7 +42,7 @@ export default function CarparkItem({ carparkNumber, carparkInfo, time }) {
             <Typography color="#6C6E70" align="left">
               Available: {cp.lots_available}
             </Typography>
-          </Container>
+          </Grid>
         );
       })}
       <Divider />
