@@ -45,13 +45,15 @@ export default function Profile() {
 
   const displayMemberDetails = async () => {
     try {
-      const res = await fetch(`/api/details/${member.id}`, {
-        headers: {
-          Authorization: `Bearer ${member.token}`,
-        },
-      });
+      const res = await fetch(
+        `https://my-carpark-api.herokuapp.com/api/details/${member.id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${member.token}`,
+          },
+        }
+      );
       const json = await res.json();
-      console.log(json);
       setProfile({
         firstName: json.firstName,
         lastName: json.lastName,
@@ -79,7 +81,7 @@ export default function Profile() {
     <Collapse
       in={checked}
       {...(checked ? { timeout: 1000 } : {})}
-      collapsedHeight={50}
+      collapsedheight={50}
     >
       <Grid sx={gridStyle}>
         <Paper elevation={10} sx={paperStyle}>

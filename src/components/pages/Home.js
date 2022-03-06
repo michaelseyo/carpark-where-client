@@ -62,7 +62,7 @@ export default function Home() {
       <Collapse
         in={checked}
         {...(checked ? { timeout: 1000 } : {})}
-        collapsedHeight={50}
+        collapsedheight={50}
       >
         <Typography variant="h3" color="primary" sx={{ fontWeight: "bolder" }}>
           Welcome
