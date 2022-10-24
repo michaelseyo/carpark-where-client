@@ -14,13 +14,14 @@ import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
 import profileImg from "../../images/profile-image.jpg";
 
 const gridStyle = {
-  margin: 5,
+  margin: "20px",
 };
 const paperStyle = {
   padding: "40px",
   height: "30vh",
-  minHeight: "320px",
-  width: 260,
+  minHeight: "340px",
+  minWidth: "240px",
+  maxWidth: "600px",
   margin: "70px auto",
 };
 const avatarStyle = {
@@ -31,7 +32,7 @@ const detailsGridStyle = {
   margin: "20px 0",
 };
 const dividerStyle = {
-  margin: "15px 0",
+  margin: "12px 0",
 };
 const cardMediaStyle = {
   margin: "20px 0",
