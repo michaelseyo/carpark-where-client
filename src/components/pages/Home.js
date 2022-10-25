@@ -28,6 +28,7 @@ const cardStyle = {
   margin: "20px auto",
   padding: "30px",
   maxWidth: "800px",
+  minWidth: "200px"
 };
 
 const cardMediaStyle = {
@@ -63,6 +64,7 @@ export default function Home() {
         in={checked}
         {...(checked ? { timeout: 1000 } : {})}
         collapsedheight={50}
+        sx={{minWidth: "300px"}}
       >
         <Typography variant="h3" color="primary" sx={{ fontWeight: "bolder" }}>
           Welcome

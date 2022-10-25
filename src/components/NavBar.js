@@ -50,7 +50,7 @@ export default function NavBar() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, minWidth: "380px"}}>
       <AppBar position="static">
         <Toolbar>
           <IconButton

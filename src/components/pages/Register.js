@@ -9,13 +9,14 @@ import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
 import { useNavigate } from "react-router-dom";
 
 const gridStyle = {
-  margin: "60px 0",
+  margin: "60px 20px",
 };
 const paperStyle = {
   padding: "40px",
   height: "40vh",
   minHeight: "480px",
-  width: 260,
+  minWidth: "260px",
+  maxWidth: "600px",
   margin: "20px auto",
 };
 const avatarStyle = {

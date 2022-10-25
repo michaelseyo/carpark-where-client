@@ -17,8 +17,10 @@ const gridStyle = {
 const paperStyle = {
   padding: "40px",
   height: "100px",
-  width: 260,
+  minWidth: "300px",
+  maxWidth: "600px",
   margin: "20px auto",
+  boxShadow: "none"
 };
 const avatarStyle = {
   backgroundColor: "#ba000d",

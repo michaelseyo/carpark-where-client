@@ -93,6 +93,7 @@ export default function Search() {
         in={checked}
         {...(checked ? { timeout: 1000 } : {})}
         collapsedheight={50}
+        sx={{minWidth: "300px"}}
       >
         <Typography variant="h3" color="primary" sx={{ fontWeight: "bolder" }}>
           Retrieve information
