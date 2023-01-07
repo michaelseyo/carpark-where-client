@@ -47,7 +47,7 @@ export default function Profile() {
   const displayMemberDetails = async () => {
     try {
       const res = await fetch(
-        `https://my-carpark-api.herokuapp.com/api/details/${member.id}`,
+        `https://carpark-where-api.onrender.com/api/details/${member.id}`,
         {
           headers: {
             Authorization: `Bearer ${member.token}`,

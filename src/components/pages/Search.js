@@ -46,7 +46,7 @@ export default function Search() {
     const getAvailabilityData = async () => {
       try {
         const res = await fetch(
-          "https://my-carpark-api.herokuapp.com/api/availability",
+          "https://carpark-where-api.onrender.com/api/availability",
           {
             headers: {
               Authorization: `Bearer ${member.token}`,
@@ -93,7 +93,7 @@ export default function Search() {
         in={checked}
         {...(checked ? { timeout: 1000 } : {})}
         collapsedheight={50}
-        sx={{minWidth: "300px"}}
+        sx={{ minWidth: "300px" }}
       >
         <Typography variant="h3" color="primary" sx={{ fontWeight: "bolder" }}>
           Retrieve information

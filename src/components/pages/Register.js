@@ -71,7 +71,7 @@ export default function Register() {
   const postMember = async (member) => {
     try {
       const res = await fetch(
-        "https://my-carpark-api.herokuapp.com/api/register",
+        "https://carpark-where-api.onrender.com/api/register",
         {
           method: "POST",
           headers: {

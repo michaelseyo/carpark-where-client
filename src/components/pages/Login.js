@@ -52,7 +52,7 @@ export default function Login() {
   const handleLogin = async () => {
     try {
       const res = await fetch(
-        "https://my-carpark-api.herokuapp.com/api/login",
+        "https://carpark-where-api.onrender.com/api/login",
         {
           method: "POST",
           headers: {
